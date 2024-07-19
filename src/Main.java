@@ -26,9 +26,18 @@ public class Main
                 System.out.println("The result is: " + res);
                 break;
             case "/":
-                res = num1 / num2;
-                System.out.println("The result is: " + res);
-                break;
+                if(num2 == 0 || num1 == 0)
+                {
+                    System.err.println("ERROR");
+                }
+                else
+                {
+                    res = num1 / num2;
+                    System.out.println("The result is: " + res);
+                    break;
+                }
+            default:
+                System.err.println("ERROR");
         }
     }
 }
